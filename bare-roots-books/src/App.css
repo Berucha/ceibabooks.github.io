@@ -40,3 +40,23 @@ footer {
   padding: 20px 0;
   text-align: center;
 }
+
+/* 3D Bookshelf styling */
+.book-info {
+  text-align: center;
+  background-color: #f7d8aa;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-info h5 {
+  margin-top: 10px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 24px;
+}
+
+.book-info p {
+  font-size: 18px;
+  color: #555;
+}
