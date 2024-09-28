@@ -5,27 +5,38 @@ body {
   font-family: 'Cormorant Garamond', serif; /* Sets the primary font for the app */
 }
 
-/* Header and title styles */
-h1 {
-  font-family: 'Amatic SC', cursive; /* Uses a cursive font for a cozy vibe */
-  font-size: 3em;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-/* Card hover effect for books */
-.card {
-  border-radius: 16px; /* Adds soft corners to the cards */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
-}
-
-.card:hover {
-  transform: translateY(-8px); /* Lifts the card on hover */
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Increases the shadow on hover */
-}
-
 /* Navbar styling */
 .navbar {
-  background-color: #f7d8aa; /* Adds a soft pastel background to the navbar */
+  font-family: 'Amatic SC', cursive; /* Uses a cursive font for a cozy vibe */
+  background-color: #f7d8aa !important; /* Adds a pastel background to the navbar */
+}
+
+.nav-link {
+  color: #333 !important; /* Darker link color for better readability */
+  font-size: 1.25rem; /* Makes the links larger and more inviting */
+}
+
+.navbar-brand {
+  font-size: 2rem !important; /* Increases the font size for the brand name */
+}
+
+.nav-link:hover {
+  color: #555 !important; /* Changes the link color on hover for a subtle effect */
+}
+
+/* Social media icon styling */
+.navbar .nav-link svg {
+  font-size: 1.5rem; /* Increases the size of the social media icons */
+  margin-left: 10px; /* Adds spacing between the icons */
+}
+
+.navbar .nav-link svg:hover {
+  color: #555 !important; /* Adds a hover effect for the social media icons */
+}
+
+/* Footer styling */
+footer {
+  background-color: #f7d8aa;
+  padding: 20px 0;
+  text-align: center;
 }
