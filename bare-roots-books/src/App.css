@@ -63,5 +63,5 @@ footer {
 
 /* Custom enchanted wand cursor */
 body, .custom-cursor-enabled {
-  cursor: url('/enchanted_cursor.png'), auto;
+  cursor: url('/workspaces/berucha.github.io/bare-roots-books/public/enchanted_cursor.png'), auto;
 }

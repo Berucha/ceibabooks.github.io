@@ -23,7 +23,10 @@ function Bookshelf() {
 
       {/* 3D interactive bookshelf */}
       <div style={{ height: '600px', border: '1px solid #ccc', marginBottom: '50px' }}>
-        <Canvas shadows>
+        <Canvas 
+          shadows
+          camera={{ position: [0, 0, 6], fov: 55 }} // Positioning the camera higher and further back
+        >
           <ambientLight intensity={2} /> {/* Soft lighting - try 0.5 to 2.0 as values */}
           <pointLight position={[10, 10, 10]} castShadow /> {/* Point light with shadows*/}
           
