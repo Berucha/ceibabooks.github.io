@@ -23,7 +23,7 @@ function Bookshelf() {
       {/* 3D interactive bookshelf */}
       <div style={{ height: '600px', border: '1px solid #ccc', marginBottom: '50px' }}>
         <Canvas shadows>
-          <ambientLight intensity={0.5} /> {/* Soft lighting */}
+          <ambientLight intensity={2} /> {/* Soft lighting - try 0.5 to 2.0 as values */}
           <pointLight position={[10, 10, 10]} castShadow /> {/* Point light with shadows*/}
 
           {/* Placing a simple, dynamic, brown rectangle behind the books to act as a shelf */}
