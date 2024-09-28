@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Container } from 'react-bootstrap'; // Container for layout
 import Home from './pages/Home'; // Home page
 import Bookshelf from './pages/Bookshelf'; // Bookshelf page
@@ -12,16 +12,16 @@ function App() {
   return (
     <Router>
       {/* Renders the reusable Navbar at the top of every page */}
-      <NavigationBar /> 
+      <NavigationBar />
 
-      <Container className="mt-4">
-        <Switch>
+      <div className="main-content">
+        <Routes>
           {/* Routing setup */}
-          <Route exact path="/" component={Home} />
-          <Route path="/bookshelf" component={Bookshelf} />
-          <Route path="/profile" component={Profile} />
-        </Switch>
-      </Container>
+          <Route path="/" element={<Home />} />
+          <Route path="/bookshelf" element={<Bookshelf />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </div>
 
       {/* Renders the Footer at the bottom */}
       <Footer />
