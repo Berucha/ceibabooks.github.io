@@ -60,3 +60,8 @@ footer {
   font-size: 18px;
   color: #555;
 }
+
+/* Custom enchanted wand cursor */
+body, .custom-cursor-enabled {
+  cursor: url('/enchanted_cursor.png'), auto;
+}

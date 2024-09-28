@@ -4,6 +4,7 @@ import { OrbitControls } from '@react-three/drei'; // Imports OrbitControls and 
 import booksData from '../data/booksData'; // Imports book data
 import Book3D from '../components/Book3D'; // Imports the 3D Book component
 import { Container } from 'react-bootstrap'; // Imports Bootstrap layout components
+import WandLight from '../components/WandLight';
 
 function Bookshelf() {
   const rows = 3; // Number of rows for the bookshelf
@@ -17,7 +18,7 @@ function Bookshelf() {
   const shelfHeight = rows * (bookHeight + spacing); // Calculate total height for the shelf
 
   return (
-    <Container>
+    <Container className="custom-cursor-enabled">
       <h1>Your Cozy 3D Bookshelf</h1>
 
       {/* 3D interactive bookshelf */}
@@ -25,6 +26,9 @@ function Bookshelf() {
         <Canvas shadows>
           <ambientLight intensity={2} /> {/* Soft lighting - try 0.5 to 2.0 as values */}
           <pointLight position={[10, 10, 10]} castShadow /> {/* Point light with shadows*/}
+          
+          {/* WandLight component that follows the cursor */}
+          <WandLight />
 
           {/* Placing a simple, dynamic, brown rectangle behind the books to act as a shelf */}
           {/* <mesh position={[0, -0.5, -5]} receiveShadow> */}
