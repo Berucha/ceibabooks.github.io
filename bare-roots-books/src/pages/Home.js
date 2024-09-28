@@ -3,9 +3,7 @@ import { Jumbotron, Button, Container } from 'react-bootstrap'; // Imports Boots
 
 function Home() {
   return (
-    <Container>
-      {/* Creates a Jumbotron for the homepage with a welcome message */}
-      <Jumbotron style={{ backgroundColor: '#faf5e6', padding: '2rem' }}>
+    <Container className="p-5 mb-4 bg-light rounded-3">
         <h1 className="display-4">Welcome to Bare Roots Books</h1>
         <p className="lead">
           Dive into a world of enchanting stories and connect with fellow book lovers.
@@ -16,7 +14,6 @@ function Home() {
         </p>
         {/* Adds a button that links to the bookshelf */}
         <Button variant="success" href="/bookshelf">Explore the Bookshelf</Button>
-      </Jumbotron>
     </Container>
   );
 }
