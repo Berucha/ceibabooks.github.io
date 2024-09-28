@@ -1,10 +1,11 @@
-import React from 'react';
+import React from 'react'; // Imports React
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; // Imports routing components
 import { Navbar, Nav, Container } from 'react-bootstrap'; // Imports React Bootstrap components
 import Home from './pages/Home'; // Imports the Home page component
 import Bookshelf from './pages/Bookshelf'; // Imports the Bookshelf page component
 import Profile from './pages/Profile'; // Imports the Profile page component
-import './App.css'; // Imports the global styles
+import Footer from './components/Footer'; // Imports the Footer component
+import './App.css'; // Imports global styles
 
 function App() {
   return (
@@ -16,7 +17,6 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              {/* Links to different pages */}
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/bookshelf">Bookshelf</Nav.Link>
               <Nav.Link href="/profile">Profile</Nav.Link>
@@ -33,6 +33,9 @@ function App() {
           <Route path="/profile" component={Profile} />
         </Switch>
       </Container>
+
+      {/* Renders the Footer at the bottom of every page */}
+      <Footer />
     </Router>
   );
 }
