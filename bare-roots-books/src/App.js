@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home'; // Home page
 import Bookshelf from './pages/Bookshelf'; // Bookshelf page
 import Profile from './pages/Profile'; // Profile page
-import Footer from './components/Footer'; // Footer component
+// import Footer from './components/Footer'; // Footer component
 import NavigationBar from './components/Navbar'; // Reusable Navbar component
-import './App.css'; // Global styles
 import SignUp from './pages/SignUp';
-import '../src/css/components/WandLight.css'; // Import the CSS for the custom wand cursor
 import PetHome from './pages/PetHome';
+import './App.css'; // Global styles
+import '../src/css/components/WandLight.css'; // Import the CSS for the custom wand cursor
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
         </div>
 
         {/* Renders the Footer at the bottom */}
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router >
   );

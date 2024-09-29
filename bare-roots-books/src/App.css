@@ -1,8 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* /src/App.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Cormorant+Garamond:wght@400;700&display=swap');
 
 /* Global body styling */
 body {
-  background-color: #faf5e6; /* Sets a cozy beige background */
-  color: #333; /* Sets the text color to a neutral gray */
-  font-family: 'Comic Sans MS', serif; /* Sets the primary font for the app - Cormorant Garamond*/
+  background-color: #faf5e6; /* Cozy beige background */
+  color: #333; /* Neutral gray text color for better readability */
+  font-family: 'Cormorant Garamond', serif; /* More elegant font for the app */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure padding and borders are included in width and height */
+}
+
+/* Reset margins and padding */
+h1, h2, h3, p, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* General link styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #ff6b6b; /* Soft red for hover effects */
+}
+
+/* Adds spacing for sections */
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Make the app responsive */
+@media (max-width: 768px) {
+  body {
+    font-size: 90%; /* Reduce font size slightly on smaller screens */
+  }
+
+  section {
+    padding: 15px;
+  }
 }
