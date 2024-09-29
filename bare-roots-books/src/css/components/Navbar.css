@@ -1,0 +1,41 @@
+/* src/css/components/Navbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.navbar {
+    background-color: #f7d8aa;
+    font-family: 'Amatic SC', cursive;
+    background-color: #f7d8aa !important;
+
+
+}
+
+.navbarLink {
+    color: #333 !important;
+    /* Darker link color for better readability */
+    font-size: 1.25rem;
+    /* Makes the links larger and more inviting */
+}
+
+.navbarLink:hover {
+    color: #555 !important;
+    /* Changes the link color on hover for a subtle effect */
+}
+
+.navbarBrand {
+    font-family: 'Pacifico, cursive';
+    font-size: 2rem !important;
+    /* Increases the font size for the brand name */
+}
+
+/* Social media icon styling */
+.navbar .navbarLink svg {
+    font-size: 1.5rem;
+    /* Increases the size of the social media icons */
+    margin-left: 10px;
+    /* Adds spacing between the icons */
+}
+
+.navbar .navbarLink svg:hover {
+    color: #555 !important;
+    /* Adds a hover effect for the social media icons */
+}

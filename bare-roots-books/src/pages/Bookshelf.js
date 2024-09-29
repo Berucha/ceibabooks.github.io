@@ -1,10 +1,12 @@
 import React from 'react'; // Imports React
 import { Canvas } from '@react-three/fiber'; // Imports Canvas from React Three Fiber for 3D rendering
-import { OrbitControls } from '@react-three/drei'; // Imports OrbitControls and useTexture for loading images as textures
+import { OrbitControls } from '@react-three/drei'; // Imports OrbitControls for 3D navigation
 import booksData from '../data/booksData'; // Imports book data
 import Book3D from '../components/Book3D'; // Imports the 3D Book component
 import { Container } from 'react-bootstrap'; // Imports Bootstrap layout components
 import WandLight from '../components/WandLight';
+import '../css/components/WandLight.css'
+import '../css/pages/Bookshelf.css'
 
 function Bookshelf() {
   const rows = 3; // Number of rows for the bookshelf
@@ -22,10 +24,10 @@ function Bookshelf() {
       <h1>Your Cozy 3D Bookshelf</h1>
 
       {/* 3D interactive bookshelf */}
-      <div style={{ height: '600px', border: '1px solid #ccc', marginBottom: '50px' }}>
-        <Canvas 
+      <div className="bkshlf">
+        <Canvas
           shadows
-          camera={{ position: [0, 0, 6], fov: 55 }} // Positioning the camera higher and further back
+          camera={{ position: [0, 3, 6], fov: 55 }} // Adjusting camera position and field of view
         >
           <ambientLight intensity={2} /> {/* Soft lighting - try 0.5 to 2.0 as values */}
           <pointLight position={[10, 10, 10]} castShadow /> {/* Point light with shadows*/}

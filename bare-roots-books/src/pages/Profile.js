@@ -1,4 +1,5 @@
 import React from 'react'; // Imports React
+// import '../css/pages/Profile.css'
 
 function Profile() {
   return (

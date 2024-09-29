@@ -1,9 +1,10 @@
 import React from 'react'; // Imports React
 import { Container, Row, Col } from 'react-bootstrap'; // Imports Bootstrap layout components
+import '../css/components/Footer.css'
 
 function Footer() {
   return (
-    <footer style={{ backgroundColor: '#f7d8aa', padding: '20px 0', marginTop: 'auto' }}>
+    <footer className="ftr">
       <Container>
         <Row>
           <Col md={6}>
@@ -12,7 +13,7 @@ function Footer() {
           </Col>
           <Col md={6} className="text-md-right">
             {/* Displays social media or other useful links */}
-            <a href="/privacy-policy" style={{ marginRight: '15px' }}>Privacy Policy</a>
+            <a href="/privacy-policy" className="policy">Privacy Policy</a>
             <a href="/terms-of-service">Terms of Service</a>
           </Col>
         </Row>

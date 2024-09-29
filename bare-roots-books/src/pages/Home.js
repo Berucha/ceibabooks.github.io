@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'; // Imports React and useEffect
 import { Button, Container } from 'react-bootstrap'; // Imports Bootstrap components
 import { useNavigate } from 'react-router-dom'; // Imports useNavigate for navigation
+// import '../css/pages/Home.css'
 
 function Home() {
   const navigate = useNavigate();

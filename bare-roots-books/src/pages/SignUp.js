@@ -1,7 +1,7 @@
 // src/pages/SignUp.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import '../css/SignUp.css'; // Custom CSS for styling the SignUp page
+import '../css/pages/SignUp.css'; // Custom CSS for styling the SignUp page
 
 function SignUp() {
   // Initialize React state for managing input values

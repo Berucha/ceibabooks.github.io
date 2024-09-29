@@ -1,5 +1,6 @@
 // src/components/WandLight.js
 import React, { useState, useEffect } from 'react';
+import '../css/components/WandLight.css'
 
 const WandLight = () => {
   const [lightPosition, setLightPosition] = useState([0, 0, 5]);

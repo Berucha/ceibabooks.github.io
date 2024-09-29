@@ -2,15 +2,15 @@
 import React from 'react'; // Imports React
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'; // Imports Bootstrap components for navigation
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'; // Imports social media icons from react-icons
-import '../css/Navbar.css';
+import '../css/components/Navbar.css';
 
 
 function NavigationBar() {
   return (
-    <Navbar bg="light" expand="lg" sticky="top" className="nvbarStyle"> {/* Sticky Navbar */}
+    <Navbar bg="light" expand="lg" sticky="top" className="navbar"> {/* Sticky Navbar */}
       <Container>
         {/* App name or logo */}
-        <Navbar.Brand href="/" className="nvBarBrand">Bare Roots Books</Navbar.Brand>
+        <Navbar.Brand href="/" className="navbarBrand">Bare Roots Books</Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" /> {/* Toggle button for mobile view */}
         <Navbar.Collapse id="basic-navbar-nav"> {/* Collapsible menu for mobile view */}
@@ -30,9 +30,9 @@ function NavigationBar() {
 
           {/* Social media icons aligned to the right */}
           <Nav className="ml-auto">
-            <Nav.Link href="https://facebook.com" target="_blank"><FaFacebook /></Nav.Link>
-            <Nav.Link href="https://twitter.com" target="_blank"><FaTwitter /></Nav.Link>
-            <Nav.Link href="https://instagram.com" target="_blank"><FaInstagram /></Nav.Link>
+            <Nav.Link href="https://facebook.com" target="_blank" className="navbarLink"><FaFacebook /></Nav.Link>
+            <Nav.Link href="https://twitter.com" target="_blank" className="navbarLink"><FaTwitter /></Nav.Link>
+            <Nav.Link href="https://instagram.com" target="_blank" className="navbarLink"><FaInstagram /></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

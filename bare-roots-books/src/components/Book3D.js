@@ -1,5 +1,6 @@
 import React from 'react'; // Imports React
 import { useTexture } from '@react-three/drei'; // useTexture for loading textures
+// import "../css/components/Book3D.css"
 
 // Book3D component renders a 3D book with a texture on it
 function Book3D({ position, coverTextureUrl, spineColor, width, height, depth }) {

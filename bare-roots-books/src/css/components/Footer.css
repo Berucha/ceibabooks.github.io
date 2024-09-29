@@ -1,0 +1,15 @@
+/* src/css/components/Footer.css */
+.ftr{
+    background-color: #f7d8aa;
+    padding: 20px 0;
+    margin-top: auto;
+    text-align: center;
+
+    .policy{
+        margin-right: 15px;
+    }
+}
+
+
+
+  

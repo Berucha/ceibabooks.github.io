@@ -1,10 +1,11 @@
 import React from 'react'; // Imports React
 import { Card } from 'react-bootstrap'; // Imports the Bootstrap Card component
+import '../css/components/Book.css'
 
 function Book({ title, author, cover }) {
   return (
     // Renders the book inside a Bootstrap card
-    <Card style={{ width: '18rem', marginBottom: '20px' }}>
+    <Card className="bkCard">
       {/* Displays the book cover image */}
       <Card.Img variant="top" src={cover} />
       

@@ -1,0 +1,24 @@
+/* src/css/components/WandLight.css */
+body, .custom-cursor-enabled {
+    cursor: url('/workspaces/berucha.github.io/bare-roots-books/public/enchanted_cursor.png'), auto;
+  }
+  
+  
+  /* Optionally, you could apply some glow or hover effects if you have a wand visual in the 3D world */
+  .wand-glow {
+    animation: glow 1.5s infinite;
+    filter: brightness(1.2);
+  }
+  
+  @keyframes glow {
+    0% {
+      filter: brightness(1);
+    }
+    50% {
+      filter: brightness(1.5);
+    }
+    100% {
+      filter: brightness(1);
+    }
+  }
+  

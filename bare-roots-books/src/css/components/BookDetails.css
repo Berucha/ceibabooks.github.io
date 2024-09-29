@@ -1,0 +1,33 @@
+/* src/css/components/BookDetails.css */
+.book-details-card {
+    background-color: #f9f9f9; /* Soft background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px 0;
+  }
+  
+  .book-details-card img {
+    max-width: 100%; /* Ensures the image doesn't overflow */
+    border-radius: 10px 10px 0 0; /* Matches card rounding */
+  }
+  
+  .book-details-title {
+    font-size: 1.5rem; /* Larger font for the title */
+    font-weight: bold;
+    color: #333; /* Dark color for better readability */
+  }
+  
+  .book-details-author {
+    font-size: 1.2rem; /* Slightly smaller font for the author */
+    color: #666; /* Gray for a subtler effect */
+  }
+  
+  .book-details-button {
+    background-color: #5cb85c; /* Custom color for the button */
+    border: none;
+  }
+  
+  .book-details-button:hover {
+    background-color: #4cae4c; /* Darker green on hover */
+  }
+  
