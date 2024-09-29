@@ -1,10 +1,20 @@
 /* src/css/components/Bookshelf.css */
 .bookshelf {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 100px;
 }
+
+/* .decor-settings-button {
+  margin-bottom: 20px; 
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} */
 
 .shelf {
   display: flex;
@@ -12,21 +22,62 @@
   background-color: #8b4513; /* Brown color for the shelf */
   padding: 10px;
   border-radius: 5px;
+  position: relative;
+  height: 20px; /* Height of the shelf itself */
+  margin-top: 50px; /* Space for books to sit on top */
+  margin-bottom: 50px; 
+}
+
+.shelf::before {
+  content: '';
+  position: absolute;
+  top: -10px; /* Adjust this value to control the thickness of the top border */
+  left: 0;
+  right: 0;
+  height: 10px; /* Thickness of the top border */
+  background-color: #8b4513; /* Same color as the shelf */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .book {
   margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: relative;
+  top: -45px; /* Adjust this value to position the books on top of the shelf */
+}
+
+.books{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.progress-bar {
+  width: 60px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4CAF50;
 }
 
 .book-cover {
   width: 60px;
-  height: 100px;
+  height: 80px;
   background-color: #f0e68c; /* Light yellow color for the book cover */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #000;
+  border: none;
   border-radius: 3px;
 }
 
@@ -42,4 +93,6 @@
 .decor {
   font-size: 24px;
   margin: 0 10px;
+  position: relative;
+  top: -35px; /* Adjust this value to position the decor on top of the shelf */
 }
