@@ -1,1 +1,42 @@
 /* src/css/pages/Home.css */
+
+/* Add Courier New font and typewriter animation */
+.typewriter-effect {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    white-space: nowrap;
+    /* Prevents text wrapping */
+    overflow: hidden;
+    /* Ensures the text is hidden initially */
+    border-right: 2px solid;
+    /* Adds a blinking cursor effect */
+    width: 0;
+    /* Start with no width */
+    animation: typewriter 4s steps(30) 1s 1 normal both,
+        /* Spell out the text */
+        blink 0.75s step-end infinite;
+    /* Blinking cursor effect */
+}
+
+/* Define the typewriter effect */
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+        /* Full width of the text */
+    }
+}
+
+/* Define the blinking cursor */
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: black;
+    }
+}

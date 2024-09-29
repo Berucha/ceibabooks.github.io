@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'; // Imports React and useEffect
 import { Button, Container } from 'react-bootstrap'; // Imports Bootstrap components
 import { useNavigate } from 'react-router-dom'; // Imports useNavigate for navigation
-// import '../css/pages/Home.css'
+import '../css/pages/Home.css'
 
 function Home() {
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ function Home() {
 
   return (
     <Container className="p-5 mb-4 bg-light rounded-3">
-      <h1 className="display-4">Welcome to Bare Roots Books</h1>
+      <h1 className="display-4 typewriter-effect">Welcome, Reader ...</h1>
       <p className="lead">
         Dive into a world of enchanting stories and connect with fellow book lovers.
       </p>
