@@ -69,4 +69,4 @@ const defaultBooks = [
     },
 ];
 
-export default defaultBooks;   // Exports the books data for use in the Bookshelf component.
+export default defaultBooks;   // Exports the books data for use in the PersonalLibrary component.

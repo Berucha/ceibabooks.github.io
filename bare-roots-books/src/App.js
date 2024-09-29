@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home'; // Home page
-import Bookshelf from './pages/Bookshelf'; // Bookshelf page
+import PersonalLibrary from './pages/PersonalLibrary'; // PersonalLibrary page
 import Profile from './pages/Profile'; // Profile page
 // import Footer from './components/Footer'; // Footer component
 import NavigationBar from './components/Navbar'; // Reusable Navbar component
@@ -24,7 +24,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/pethome" element={<PetHome />} />
-            <Route path="/bookshelf" element={<Bookshelf />} />
+            <Route path="/PersonalLibrary" element={<PersonalLibrary />} />
             <Route path="/profile" element={<Profile />} />
           </Routes>
         </div>
