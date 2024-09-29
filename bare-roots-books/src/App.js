@@ -8,6 +8,7 @@ import NavigationBar from './components/Navbar'; // Reusable Navbar component
 import './App.css'; // Global styles
 import SignUp from './pages/SignUp';
 import '../src/css/components/WandLight.css'; // Import the CSS for the custom wand cursor
+import PetHome from './pages/PetHome';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             {/* Routing setup */}
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/pethome" element={<PetHome />} />
             <Route path="/bookshelf" element={<Bookshelf />} />
             <Route path="/profile" element={<Profile />} />
           </Routes>
