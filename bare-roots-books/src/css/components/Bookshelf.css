@@ -1,0 +1,45 @@
+/* src/css/components/Bookshelf.css */
+.bookshelf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.shelf {
+  display: flex;
+  align-items: flex-end;
+  background-color: #8b4513; /* Brown color for the shelf */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.book {
+  margin: 0 10px;
+}
+
+.book-cover {
+  width: 60px;
+  height: 100px;
+  background-color: #f0e68c; /* Light yellow color for the book cover */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.book-title {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.book-author {
+  font-size: 10px;
+}
+
+.decor {
+  font-size: 24px;
+  margin: 0 10px;
+}

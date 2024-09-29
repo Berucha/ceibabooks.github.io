@@ -2,16 +2,16 @@ import React, { useState } from 'react'; // Imports React and hooks
 import { Canvas } from '@react-three/fiber'; // Imports Canvas from React Three Fiber for 3D rendering
 import { OrbitControls } from '@react-three/drei'; // Imports OrbitControls for 3D navigation
 import Book3D from '../components/Book3D'; // Imports the 3D Book component
-import defaultBooks from '../data/booksData'; // Pre-populated default bookshelf
+import defaultBooks from '../data/booksData'; // Pre-populated default PersonalLibrary
 import '../css/components/WandLight.css';
-import '../css/pages/Bookshelf.css';
+import '../css/pages/PersonalLibrary.css';
 
-function Bookshelf() {
-  const [showPreview, setShowPreview] = useState(false); // Toggle for showing the 3D bookshelf preview
+function PersonalLibrary() {
+  const [showPreview, setShowPreview] = useState(false); // Toggle for showing the 3D PersonalLibrary preview
 
-  // Function to render the current bookshelf
-  const renderBookshelfPreview = (books) => {
-    const rows = 3; // Number of rows for the bookshelf
+  // Function to render the current PersonalLibrary
+  const renderPersonalLibraryPreview = (books) => {
+    const rows = 3; // Number of rows for the PersonalLibrary
     const bookWidth = 0.8; // Width of each book in 3D
     const bookHeight = 1.2; // Height of the book
     const bookDepth = 0.3; // Depth of the book
@@ -25,7 +25,7 @@ function Bookshelf() {
         <pointLight position={[10, 10, 10]} castShadow />
         {/* Placing a simple, dynamic, brown rectangle behind the books to act as a shelf */}
         {/* <mesh position={[0, -0.5, -5]} receiveShadow> */}
-        {/* <planeGeometry args={[rowWidth + 2, shelfHeight + 2]} /> Width and height of the bookshelf */}
+        {/* <planeGeometry args={[rowWidth + 2, shelfHeight + 2]} /> Width and height of the PersonalLibrary */}
         {/* <meshStandardMaterial color="#8B4513" /> Brown color for the wooden shelf */}
         {/* </mesh> */}
         {books.map((book, index) => {
@@ -37,7 +37,7 @@ function Bookshelf() {
             <Book3D
               key={index}
               position={[positionX, positionY, 0]}
-              coverTextureUrl={book.cover} // Display cover from user's localStorage or default bookshelf
+              coverTextureUrl={book.cover} // Display cover from user's localStorage or default PersonalLibrary
               spineColor={book.color || '#6B4F4F'} // Default color for spine
               width={bookWidth}
               height={bookHeight}
@@ -51,25 +51,25 @@ function Bookshelf() {
   };
 
   return (
-    <div className="bookshelf-container">
-      <h1>Your 3D Bookshelf is Coming Soon!</h1>
+    <div className="library-container">
+      <h1>Your 3D PersonalLibrary is Coming Soon!</h1>
       <p>
-        The 3D bookshelf feature is under construction, but as a sneak peek, here's the developer's 2024 reading list!
+        The 3D PersonalLibrary feature is under construction, but as a sneak peek, here's the developer's 2024 reading list!
       </p>
 
-      {/* Button to toggle the 3D bookshelf preview */}
+      {/* Button to toggle the 3D PersonalLibrary preview */}
       <button className="preview-button" onClick={() => setShowPreview(!showPreview)}>
-        {showPreview ? 'Hide Preview' : 'Preview 3D Bookshelf'}
+        {showPreview ? 'Hide Preview' : 'Preview 3D PersonalLibrary'}
       </button>
 
-      {/* Conditionally render the 3D bookshelf preview */}
+      {/* Conditionally render the 3D PersonalLibrary preview */}
       {showPreview && (
-        <div className="bookshelf-preview">
-          {renderBookshelfPreview(defaultBooks)}
+        <div className="library-preview">
+          {renderPersonalLibraryPreview(defaultBooks)}
         </div>
       )}
     </div>
   );
 }
 
-export default Bookshelf;
+export default PersonalLibrary;

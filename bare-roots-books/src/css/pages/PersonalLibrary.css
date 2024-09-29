@@ -1,29 +1,29 @@
-/* src/css/pages/Bookshelf.css */
+/* src/css/pages/PersonalLibrary.css */
 .bkshlf {
   height: 600px;
   border: 1px solid #ccc;
   margin-bottom: 50px;
 }
 
-/* Bookshelf container */
-.bookshelf-container {
+/* PersonalLibrary container */
+.library-container {
   text-align: center;
   padding: 20px;
 }
 
-.bookshelf-container h1 {
+.library-container h1 {
   font-size: 2.5rem;
   font-family: 'Pacifico', cursive;
   color: #333;
 }
 
-.bookshelf-container p {
+.library-container p {
   font-size: 1.5rem;
   font-family: 'Amatic SC', cursive;
   color: #555;
 }
 
-/* Button for previewing the 3D bookshelf */
+/* Button for previewing the 3D personal library */
 .preview-button {
   padding: 10px 20px;
   background-color: #ff6b6b;
@@ -40,8 +40,8 @@
   background-color: #ff4c4c;
 }
 
-.bookshelf-preview {
-  height: 600px; /* The height for the 3D bookshelf preview */
+.library-preview {
+  height: 600px; /* The height for the 3D library preview */
   border: 1px solid #ccc;
   margin-bottom: 50px;
 }

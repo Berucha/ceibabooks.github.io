@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'; // Imports React and useEffect
 import { Button, Container } from 'react-bootstrap'; // Imports Bootstrap components
 import { useNavigate } from 'react-router-dom'; // Imports useNavigate for navigation
 import '../css/pages/Home.css'
+import Bookshelf from '../components/Bookshelf';
 
 function Home() {
   const navigate = useNavigate();
@@ -20,15 +21,9 @@ function Home() {
       <div className="typewriter-container">
       <h1 className="display-4 typewriter-effect">Welcome Dearest Reader</h1>
       </div>
-      <p className="lead">
-        Dive into a world of enchanting stories and connect with fellow book lovers.
-      </p>
-      <hr className="my-4" />
-      <p>
-        Browse your bookshelf, track your reading journey, and more.
-      </p>
-      {/* Explore the Bookshelf button */}
-      <Button variant="success" href="/bookshelf">Explore the Bookshelf</Button>
+      <Bookshelf />
+      {/* Explore the personallibrary button */}
+      <Button variant="success" href="/personallibrary">Explore your Personal Library</Button>
     </Container>
   );
 }
