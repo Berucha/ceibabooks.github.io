@@ -1,6 +1,6 @@
 // data/booksData.js
 // Defines an array of book objects with relevant metadata.
-const books = [
+const defaultBooks = [
     {
         title: "African American Herbalism: A Practical Guide to Healing Plants and Folk Traditions",
         author: "Lucretia VanDyke",
@@ -10,7 +10,7 @@ const books = [
     {
         title: "The Lost Apothecary",
         author: "Sarah Penner",
-        color: 'pruple',
+        color: 'purple',
         cover: "/book-covers/The_Lost_Apothecary.jpg",
     },
     {
@@ -69,4 +69,4 @@ const books = [
     },
 ];
 
-export default books;   // Exports the books data for use in the Bookshelf component.
+export default defaultBooks;   // Exports the books data for use in the Bookshelf component.
