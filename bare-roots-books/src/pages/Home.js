@@ -17,7 +17,9 @@ function Home() {
 
   return (
     <Container className="p-5 mb-4 bg-light rounded-3">
-      <h1 className="display-4 typewriter-effect">Welcome, Reader ...</h1>
+      <div className="typewriter-container">
+      <h1 className="display-4 typewriter-effect">Welcome Dearest Reader</h1>
+      </div>
       <p className="lead">
         Dive into a world of enchanting stories and connect with fellow book lovers.
       </p>

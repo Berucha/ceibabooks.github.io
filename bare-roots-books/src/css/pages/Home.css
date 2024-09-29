@@ -1,21 +1,28 @@
 /* src/css/pages/Home.css */
 
+/* Ensure the container has the correct width */
+.typewriter-container {
+    width: fit-content; /* Adjusts the width to fit the content */
+    margin: 0 auto; /* Centers the container */
+  }
+
 /* Add Courier New font and typewriter animation */
 .typewriter-effect {
     font-family: 'Courier New', Courier, monospace;
     font-size: 3rem;
+    letter-spacing: .15em; /* Adds spacing between letters */
     white-space: nowrap;
     /* Prevents text wrapping */
     overflow: hidden;
     /* Ensures the text is hidden initially */
     border-right: 2px solid;
     /* Adds a blinking cursor effect */
+    margin: 0 auto;
+    /* Centers the text */
     width: 0;
-    /* Start with no width */
-    animation: typewriter 4s steps(30) 1s 1 normal both,
-        /* Spell out the text */
-        blink 0.75s step-end infinite;
-    /* Blinking cursor effect */
+    animation: typewriter 4s steps(30, end) 1s 1 normal both, blink-cursor 1s steps(1) 1s 4 normal both;
+
+
 }
 
 /* Define the typewriter effect */
@@ -30,13 +37,14 @@
     }
 }
 
+
 /* Define the blinking cursor */
-@keyframes blink {
-    from, to {
-        border-color: transparent;
+@keyframes blink-cursor {
+    from {
+        border-right-color: black;
     }
 
-    50% {
-        border-color: black;
+    to {
+        border-right-color: transparent;
     }
 }
