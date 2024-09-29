@@ -1,13 +1,47 @@
 /* src/css/pages/Bookshelf.css */
-
 .bkshlf {
-    /* text-align: center;
-    background-color: #f7d8aa;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
-    height: 600px;
-    border: 1px solid #ccc;
-    margin-bottom: 50px;
-  }
-  
+  height: 600px;
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+
+/* Bookshelf container */
+.bookshelf-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.bookshelf-container h1 {
+  font-size: 2.5rem;
+  font-family: 'Pacifico', cursive;
+  color: #333;
+}
+
+.bookshelf-container p {
+  font-size: 1.5rem;
+  font-family: 'Amatic SC', cursive;
+  color: #555;
+}
+
+/* Button for previewing the 3D bookshelf */
+.preview-button {
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.preview-button:hover {
+  background-color: #ff4c4c;
+}
+
+.bookshelf-preview {
+  height: 600px; /* The height for the 3D bookshelf preview */
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
+}

@@ -1,15 +1,62 @@
 /* src/css/components/Footer.css */
-.ftr{
+.footer {
     background-color: #f7d8aa;
-    padding: 20px 0;
-    margin-top: auto;
+    /* Matching the theme color */
+    padding: 10px 0;
+    /* Reduced padding for a more compact footer */
     text-align: center;
-
-    .policy{
-        margin-right: 15px;
-    }
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.1rem;
+    /* Reduced font size for more subtle text */
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    /* Ensure the footer spans the entire width of the page */
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    /* Ensure the footer spans the entire width of the page */
 }
 
+.footer-text {
+    margin: 0;
+    font-size: 1.2rem;
+    /* Slightly smaller font size for the footer text */
+    color: #333;
+    /* Darker text for contrast */
+}
 
+.footer-link {
+    color: #333;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
-  
+.footer-link:hover {
+    color: #555;
+    /* Subtle hover effect for links */
+}
+
+.footer-social {
+    color: #333;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    /* Same size for icons but centered now */
+    transition: color 0.3s ease;
+}
+
+.footer-social:hover {
+    color: #ff6b6b;
+    /* Highlight effect on hover for social media icons */
+}
+
+.text-center {
+    text-align: center !important;
+    /* Center text in all screen sizes */
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+    /* Add spacing for visual separation */
+}

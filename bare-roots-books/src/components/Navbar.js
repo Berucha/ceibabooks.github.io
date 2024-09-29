@@ -1,13 +1,12 @@
 
 import React from 'react'; // Imports React
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'; // Imports Bootstrap components for navigation
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'; // Imports social media icons from react-icons
 import '../css/components/Navbar.css';
 
 
 function NavigationBar() {
   return (
-    <Navbar bg="light" expand="lg" sticky="top" className="navbar"> {/* Sticky Navbar */}
+    <Navbar bg="transparent" expand="lg" sticky="top" className="navbar shadow-sm"> {/* Sticky Navbar */}
       <Container>
         {/* App name or logo */}
         <Navbar.Brand href="/" className="navbarBrand">Bare Roots Books</Navbar.Brand>
@@ -16,9 +15,9 @@ function NavigationBar() {
         <Navbar.Collapse id="basic-navbar-nav"> {/* Collapsible menu for mobile view */}
           <Nav className="me-auto">
             {/* Links to different pages */}
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/bookshelf">Bookshelf</Nav.Link>
-            <Nav.Link href="/profile">Profile</Nav.Link>
+            <Nav.Link href="/" className="navbar-link">Home</Nav.Link>
+            <Nav.Link href="/bookshelf" className="navbar-link">Bookshelf</Nav.Link>
+            <Nav.Link href="/profile" className="navbar-link">Profile</Nav.Link>
 
             {/* Dropdown menu for more links */}
             <NavDropdown title="More" id="basic-nav-dropdown">
@@ -26,13 +25,6 @@ function NavigationBar() {
               <NavDropdown.Item href="/contact">Contact</NavDropdown.Item>
               <NavDropdown.Item href="/terms">Terms of Service</NavDropdown.Item>
             </NavDropdown>
-          </Nav>
-
-          {/* Social media icons aligned to the right */}
-          <Nav className="ml-auto">
-            <Nav.Link href="https://facebook.com" target="_blank" className="navbarLink"><FaFacebook /></Nav.Link>
-            <Nav.Link href="https://twitter.com" target="_blank" className="navbarLink"><FaTwitter /></Nav.Link>
-            <Nav.Link href="https://instagram.com" target="_blank" className="navbarLink"><FaInstagram /></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

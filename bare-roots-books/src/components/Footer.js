@@ -1,20 +1,33 @@
 import React from 'react'; // Imports React
 import { Container, Row, Col } from 'react-bootstrap'; // Imports Bootstrap layout components
-import '../css/components/Footer.css'
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'; // Imports social media icons from react-icons
+import '../css/components/Footer.css';
 
 function Footer() {
   return (
-    <footer className="ftr">
+    <footer className="footer">
       <Container>
-        <Row>
-          <Col md={6}>
-            {/* Displays the app name and copyright */}
-            <p>&copy; 2024 Bare Roots Books. All rights reserved.</p>
+        <Row className="align-items-center">
+          {/* App name and copyright */}
+          <Col md={12} className="text-center"> 
+            <p className="footer-text">&copy; 2024 Bare Roots Books. All rights reserved.</p>
           </Col>
-          <Col md={6} className="text-md-right">
-            {/* Displays social media or other useful links */}
-            <a href="/privacy-policy" className="policy">Privacy Policy</a>
-            <a href="/terms-of-service">Terms of Service</a>
+          {/* Useful links and social icons */}
+          <Col md={12} className="text-center"> 
+            <a href="/privacy-policy" className="footer-link">Privacy Policy</a>
+            <a href="/terms-of-service" className="footer-link">Terms of Service</a>
+          </Col>
+          {/* Social media icons centered */}
+          <Col md={12} className="text-center mt-2">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="footer-social">
+              <FaFacebook />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="footer-social">
+              <FaTwitter />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="footer-social">
+              <FaInstagram />
+            </a>
           </Col>
         </Row>
       </Container>
@@ -22,4 +35,4 @@ function Footer() {
   );
 }
 
-export default Footer; // Exports the Footer component
+export default Footer;
