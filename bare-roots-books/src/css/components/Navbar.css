@@ -2,40 +2,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 .navbar {
-    background-color: #f7d8aa;
-    font-family: 'Amatic SC', cursive;
-    background-color: #f7d8aa !important;
-
-
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent white background for a sleek effect */
+    backdrop-filter: blur(10px); /* Blur effect for a modern look */
+    font-family: 'Amatic SC', cursive; /* Font family for the navbar text */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border at the bottom of the navbar */
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
 .navbarLink {
-    color: #333 !important;
-    /* Darker link color for better readability */
-    font-size: 1.25rem;
-    /* Makes the links larger and more inviting */
+    color: #333 !important; /* Darker link color for better readability */
+    font-size: 1.25rem; /* Larger font size for the links */
+    font-weight: 500; /* Slightly bold links for emphasis */
+    margin-right: 1rem; /* Spacing between links */
+    transition: color 0.2s ease; /* Smooth transition for hover effects */
 }
 
 .navbarLink:hover {
-    color: #555 !important;
-    /* Changes the link color on hover for a subtle effect */
+    color: #ff6b6b !important; /* Highlighted color when hovering over links */
 }
 
 .navbarBrand {
-    font-family: 'Pacifico, cursive';
-    font-size: 2rem !important;
-    /* Increases the font size for the brand name */
+    font-family: 'Pacifico', cursive; /* Pacifico font for the brand logo */
+    font-size: 2.5rem; /* Larger font size for the brand name */
+    color: #333; /* Dark color for the brand */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Slight shadow effect on the brand name */
 }
 
-/* Social media icon styling */
-.navbar .navbarLink svg {
-    font-size: 1.5rem;
-    /* Increases the size of the social media icons */
-    margin-left: 10px;
-    /* Adds spacing between the icons */
+/* Hover and transition effects */
+.navbar .navbarLink {
+    transition: transform 0.2s ease;
 }
 
-.navbar .navbarLink svg:hover {
-    color: #555 !important;
-    /* Adds a hover effect for the social media icons */
+.navbar .navbarLink:hover {
+    transform: scale(1.05); /* Subtle scale-up on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem; /* Adjusts padding for smaller screens */
+    }
+
+    .navbarBrand {
+        font-size: 2rem; /* Reduces font size of brand on smaller screens */
+    }
+
+    .navbarLink {
+        font-size: 1rem; /* Reduces link size for better fit on mobile */
+    }
 }
