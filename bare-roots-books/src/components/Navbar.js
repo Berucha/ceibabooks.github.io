@@ -1,13 +1,16 @@
+
 import React from 'react'; // Imports React
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'; // Imports Bootstrap components for navigation
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'; // Imports social media icons from react-icons
+import '../css/Navbar.css';
+
 
 function NavigationBar() {
   return (
-    <Navbar bg="light" expand="lg" sticky="top" style={{ backgroundColor: '#f7d8aa' }}> {/* Sticky Navbar */}
+    <Navbar bg="light" expand="lg" sticky="top" className="nvbarStyle"> {/* Sticky Navbar */}
       <Container>
         {/* App name or logo */}
-        <Navbar.Brand href="/" style={{ fontFamily: 'Amatic SC, cursive', fontSize: '2rem' }}>Bare Roots Books</Navbar.Brand>
+        <Navbar.Brand href="/" className="nvBarBrand">Bare Roots Books</Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" /> {/* Toggle button for mobile view */}
         <Navbar.Collapse id="basic-navbar-nav"> {/* Collapsible menu for mobile view */}
