@@ -20,7 +20,7 @@ function SignUp() {
     localStorage.setItem("isAuthenticated", "true"); // Marks user as authenticated
 
     // Redirect to the dashboard or homepage after sign-up
-    navigate("/dashboard"); // Update this route if necessary
+    navigate("/"); // Redirected Home
   };
 
   return (
