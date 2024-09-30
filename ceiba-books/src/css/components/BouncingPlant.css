@@ -1,0 +1,22 @@
+/* src/css/components/BouncingPlant.css */
+.bouncing-plant {
+    position: absolute;
+    width: auto;
+    height: auto;
+    max-width: 80%;
+    max-height: 80px;
+    animation: bounce 1s ease infinite;
+    /* Bouncing animation */
+    z-index: 9999;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+        /* Adjust bounce height */
+    }
+}
