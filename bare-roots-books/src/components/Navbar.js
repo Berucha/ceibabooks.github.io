@@ -8,15 +8,13 @@ function NavigationBar() {
   return (
     <Navbar bg="transparent" expand="lg" sticky="top" className="navbar shadow-sm"> {/* Sticky Navbar */}
       <Container>
-        {/* App name or logo */}
-        <Navbar.Brand href="/" className="navbarBrand">Bare Roots Books</Navbar.Brand>
-
+        
         {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> // Toggle button for mobile view */}
         <Navbar.Collapse id="basic-navbar-nav"> {/* Collapsible menu for mobile view */}
           <Nav className="me-auto">
             {/* Links to different pages */}
             <Nav.Link href="/" className="navbarLink">Home</Nav.Link>
-            <Nav.Link href="/personallibrary" className="navbarLink">PersonalLibrary</Nav.Link>
+            <Nav.Link href="/personallibrary" className="navbarLink">Personal Library</Nav.Link>
             <Nav.Link href="/profile" className="navbarLink">Profile</Nav.Link>
 
             {/* Dropdown menu for more links */}
