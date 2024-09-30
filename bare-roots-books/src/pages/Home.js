@@ -22,8 +22,6 @@ function Home() {
       <h1 className="display-4 typewriter-effect">Welcome Dearest Reader</h1>
       </div>
       <Bookshelf />
-      {/* Explore the personallibrary button */}
-      <Button variant="success" href="/personallibrary">Explore your Personal Library</Button>
     </Container>
   );
 }
