@@ -14,7 +14,7 @@ function NavigationBar() {
           <Nav className="me-auto">
             {/* Links to different pages */}
             <Nav.Link href="/" className="navbarLink">Home</Nav.Link>
-            <Nav.Link href="/personallibrary" className="navbarLink">Personal Library</Nav.Link>
+            <Nav.Link href="/personallibrary" className="navbarLink">Library</Nav.Link>
             <Nav.Link href="/profile" className="navbarLink">Profile</Nav.Link>
 
             {/* Dropdown menu for more links */}
