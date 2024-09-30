@@ -1,0 +1,200 @@
+/* src/css/components/Bookshelf.scss */
+.bookshelf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.bookshelf-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.decor-settings-button {
+    margin: 4px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle-plant-icon-button {
+    margin: 4px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    /* Green background */
+    color: white;
+    /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle-plant-icon-button:hover {
+    background-color: #45a049;
+    /* Darker green on hover */
+}
+
+.dropdown-container {
+    position: absolute;
+    bottom: -80px;
+    /* Adjust this value to position the dropdown below the button */
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.shelf {
+    display: flex;
+    align-items: flex-end;
+    background-color: #8b4513;
+    /* Brown color for the shelf */
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    height: 20px;
+    /* Height of the shelf itself */
+    margin-top: 50px;
+    /* Space for books to sit on top */
+    margin-bottom: 50px;
+}
+
+.shelf::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    /* Adjust this value to control the thickness of the top border */
+    left: 0;
+    right: 0;
+    height: 10px;
+    /* Thickness of the top border */
+    background-color: #8b4513;
+    /* Same color as the shelf */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.book {
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+    top: -45px;
+    /* Adjust this value to position the books on top of the shelf */
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.progress-bar {
+    width: 60px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #4CAF50;
+}
+
+.book-cover {
+    width: 60px;
+    height: 80px;
+    background-color: #f0e68c;
+    /* Light yellow color for the book cover */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 3px;
+}
+
+.book-title {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.book-author {
+    font-size: 10px;
+}
+
+.decor {
+    font-size: 24px;
+    margin: 0 10px;
+    position: relative;
+    top: -35px;
+    /* Adjust this value to position the decor on top of the shelf */
+}
+
+.floor-decor {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+}
+
+.decor img {
+    max-width: 100px;
+    /* Adjust the size as needed */
+    max-height: 100px;
+    /* Adjust the size as needed */
+    width: auto;
+    height: auto;
+}
+
+@keyframes movePlant {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(10px, -10px);
+    }
+
+    50% {
+        transform: translate(-10px, 10px);
+    }
+
+    75% {
+        transform: translate(10px, 10px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.floor-decor img {
+    max-width: 100px;
+    /* Adjust the size as needed */
+    max-height: 100px;
+    /* Adjust the size as needed */
+    width: auto;
+    height: auto;
+    position: fixed;
+    bottom: 20px;
+    animation: movePlant 5s infinite alternate ease-in-out;
+    /* Apply animation */
+}
+
+// Loop to generate nth-child selectors with different animation delays
+@for $i from 1 through 10 {
+    .floor-decor img:nth-child(#{$i}) {
+        animation-delay: $i * 0.5s; // Adjust the delay as needed
+    }
+}

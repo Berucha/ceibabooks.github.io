@@ -1,4 +1,4 @@
-/* src/css/components/Bookshelf.css */
+/* src/css/components/Bookshelf.scss */
 .bookshelf {
   display: flex;
   flex-direction: column;
@@ -6,7 +6,7 @@
   margin-top: 100px;
 }
 
-.bookshelf-buttons{
+.bookshelf-buttons {
   display: flex;
   justify-content: center;
 }
@@ -24,20 +24,63 @@
 .toggle-plant-icon-button {
   margin: 4px;
   padding: 5px 10px;
-  background-color: #4CAF50; /* Green background */
-  color: white; /* White text */
+  background-color: #4CAF50;
+  /* Green background */
+  color: white;
+  /* White text */
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .toggle-plant-icon-button:hover {
-  background-color: #45a049; /* Darker green on hover */
+  background-color: #45a049;
+  /* Darker green on hover */
+}
+
+.plant-settings {
+  position: relative;
+  top: 10px;
+  right: 10px;
+}
+
+.plant-settings-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #4CAF50;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1;
+}
+
+.dropdown-menu button {
+  background: none;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f0f0f0;
 }
 
 .dropdown-container {
   position: absolute;
-  bottom: -80px; /* Adjust this value to position the dropdown below the button */
+  bottom: -80px;
+  /* Adjust this value to position the dropdown below the button */
   right: 0;
   background-color: white;
   border: 1px solid #ccc;
@@ -50,23 +93,29 @@
 .shelf {
   display: flex;
   align-items: flex-end;
-  background-color: #8b4513; /* Brown color for the shelf */
+  background-color: #8b4513;
+  /* Brown color for the shelf */
   padding: 10px;
   border-radius: 5px;
   position: relative;
-  height: 20px; /* Height of the shelf itself */
-  margin-top: 50px; /* Space for books to sit on top */
-  margin-bottom: 50px; 
+  height: 20px;
+  /* Height of the shelf itself */
+  margin-top: 50px;
+  /* Space for books to sit on top */
+  margin-bottom: 50px;
 }
 
 .shelf::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: -10px; /* Adjust this value to control the thickness of the top border */
+  top: -10px;
+  /* Adjust this value to control the thickness of the top border */
   left: 0;
   right: 0;
-  height: 10px; /* Thickness of the top border */
-  background-color: #8b4513; /* Same color as the shelf */
+  height: 10px;
+  /* Thickness of the top border */
+  background-color: #8b4513;
+  /* Same color as the shelf */
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -77,10 +126,20 @@
   flex-direction: column;
   align-items: start;
   position: relative;
-  top: -45px; /* Adjust this value to position the books on top of the shelf */
+  top: -45px;
+  /* Adjust this value to position the books on top of the shelf */
 }
 
-.books{
+.plus-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.books {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -103,7 +162,8 @@
 .book-cover {
   width: 60px;
   height: 80px;
-  background-color: #f0e68c; /* Light yellow color for the book cover */
+  background-color: #f0e68c;
+  /* Light yellow color for the book cover */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,7 +185,8 @@
   font-size: 24px;
   margin: 0 10px;
   position: relative;
-  top: -35px; /* Adjust this value to position the decor on top of the shelf */
+  top: -35px;
+  /* Adjust this value to position the decor on top of the shelf */
 }
 
 .floor-decor {
@@ -133,13 +194,87 @@
   justify-content: space-around;
   width: 100%;
   padding: 20px;
+  position: fixed; /* Fix the container to the bottom of the screen */
+  bottom: 20px; /* Adjust the distance from the bottom as needed */
+  width: 100%;
+  display: flex;
+  justify-content: space-around; /* Spread out plants evenly */
 }
 
-.decor img,
-.floor-decor img {
-  max-width: 100px; /* Adjust the size as needed */
-  max-height: 100px; /* Adjust the size as needed */
+.decor img {
+  max-width: 100px;
+  /* Adjust the size as needed */
+  max-height: 100px;
+  /* Adjust the size as needed */
   width: auto;
   height: auto;
 }
 
+@keyframes movePlant {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, -10px);
+  }
+  50% {
+    transform: translate(-10px, 10px);
+  }
+  75% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.floor-decor img {
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  position: relative;
+  animation: movePlant 5s infinite alternate ease-in-out;
+  cursor: grab; 
+}
+
+.floor-decor img:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.floor-decor img:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.floor-decor img:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+.floor-decor img:nth-child(4) {
+  animation-delay: 2s;
+}
+
+.floor-decor img:nth-child(5) {
+  animation-delay: 2.5s;
+}
+
+.floor-decor img:nth-child(6) {
+  animation-delay: 3s;
+}
+
+.floor-decor img:nth-child(7) {
+  animation-delay: 3.5s;
+}
+
+.floor-decor img:nth-child(8) {
+  animation-delay: 4s;
+}
+
+.floor-decor img:nth-child(9) {
+  animation-delay: 4.5s;
+}
+
+.floor-decor img:nth-child(10) {
+  animation-delay: 5s;
+}
+
+/*# sourceMappingURL=Bookshelf.css.map */
