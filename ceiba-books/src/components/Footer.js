@@ -10,7 +10,7 @@ function Footer() {
         <Row className="align-items-center">
           {/* App name and copyright */}
           <Col md={12} className="text-center"> 
-            <p className="footer-text">&copy; 2024 Bare Roots Books. All rights reserved.</p>
+            <p className="footer-text">&copy; 2024 Ceiba Books. All rights reserved.</p>
           </Col>
           {/* Useful links and social icons */}
           <Col md={12} className="text-center"> 

@@ -27,7 +27,7 @@ function SignUp() {
     <div className="signup-container">
       {/* Sign-up form layout */}
       <div className="signup-form">
-        <h1 className="signup-title">Join Bare Roots Books</h1> {/* Form title */}
+        <h1 className="signup-title">Join Ceiba Books</h1> {/* Form title */}
         <form onSubmit={handleSignUp}>
           {/* Input for username */}
           <input

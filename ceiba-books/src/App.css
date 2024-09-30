@@ -4,12 +4,13 @@
 
 /* Global body styling */
 body {
-  background-color: #faf5e6; /* Cozy beige background */
+  background-color: #eff7de; /* Cozy beige background */
   color: #333; /* Neutral gray text color for better readability */
   font-family: 'Cormorant Garamond', serif; /* More elegant font for the app */
   margin: 0;
   padding: 0;
   box-sizing: border-box; /* Ensure padding and borders are included in width and height */
+  cursor: url('../public/enchanted_cursor.png'), auto; /* Adjusted path */
 }
 
 /* Reset margins and padding */

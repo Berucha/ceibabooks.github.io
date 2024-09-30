@@ -6,15 +6,46 @@
   margin-top: 100px;
 }
 
-/* .decor-settings-button {
-  margin-bottom: 20px; 
+.bookshelf-buttons{
+  display: flex;
+  justify-content: center;
+}
+
+.decor-settings-button {
+  margin: 4px;
   padding: 5px 10px;
   background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-} */
+}
+
+.toggle-plant-icon-button {
+  margin: 4px;
+  padding: 5px 10px;
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-plant-icon-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.dropdown-container {
+  position: absolute;
+  bottom: -80px; /* Adjust this value to position the dropdown below the button */
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
 
 .shelf {
   display: flex;
@@ -96,3 +127,19 @@
   position: relative;
   top: -35px; /* Adjust this value to position the decor on top of the shelf */
 }
+
+.floor-decor {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 20px;
+}
+
+.decor img,
+.floor-decor img {
+  max-width: 100px; /* Adjust the size as needed */
+  max-height: 100px; /* Adjust the size as needed */
+  width: auto;
+  height: auto;
+}
+
