@@ -1,0 +1,23 @@
+/* src/css/pages/ComingSoon.css */
+.coming-soon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f7d8aa; /* Your theme's background color */
+    text-align: center;
+  }
+  
+  .coming-soon-container h1 {
+    font-size: 3rem;
+    font-family: 'Pacifico', cursive;
+    color: #333;
+  }
+  
+  .coming-soon-container p {
+    font-size: 1.5rem;
+    font-family: 'Amatic SC', cursive;
+    color: #555;
+  }
+  

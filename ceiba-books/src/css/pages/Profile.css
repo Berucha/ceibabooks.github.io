@@ -1,0 +1,59 @@
+/* src/css/pages/Profile.css */
+.profile-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-title {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.profile-description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.plant-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.plant-option {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.plant-option:hover {
+  transform: scale(1.1);
+}
+
+.profile-plant-pet {
+  margin-top: 30px;
+  position: relative;
+}
+
+/* New styles for user icon and backdrop color picker */
+.user-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-icon {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ccc; /* Optional: Add a border around the icon */
+}
+
+.backdrop-color-picker {
+  margin-bottom: 20px;
+}

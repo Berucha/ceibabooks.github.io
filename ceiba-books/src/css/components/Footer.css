@@ -12,9 +12,9 @@
     bottom: 0;
     width: 100%;
     /* Ensure the footer spans the entire width of the page */
-    position: sticky;
+    /* position: sticky;
     bottom: 0;
-    width: 100%;
+    width: 100%; */
     /* Ensure the footer spans the entire width of the page */
 }
 
@@ -59,4 +59,17 @@
 .mt-2 {
     margin-top: 0.5rem;
     /* Add spacing for visual separation */
+}
+
+/* New styles for floor plants */
+.floor-decor {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-plant {
+    width: 50px;
+    height: auto;
 }
