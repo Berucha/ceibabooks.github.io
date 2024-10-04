@@ -120,65 +120,10 @@
   border-top-right-radius: 5px;
 }
 
-.book {
-  margin: 0 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  position: relative;
-  top: -45px;
-  /* Adjust this value to position the books on top of the shelf */
-}
-
-.plus-button {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
-  padding: 5px;
-}
-
 .books {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.progress-bar {
-  width: 60px;
-  height: 10px;
-  background-color: #ddd;
-  border-radius: 5px;
-  margin-bottom: 5px;
-  overflow: hidden;
-}
-
-.progress {
-  height: 100%;
-  background-color: #4CAF50;
-}
-
-.book-cover {
-  width: 60px;
-  height: 80px;
-  background-color: #f0e68c;
-  /* Light yellow color for the book cover */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  border-radius: 3px;
-}
-
-.book-title {
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.book-author {
-  font-size: 10px;
 }
 
 .decor {

@@ -1,10 +1,15 @@
 // src/components/PlantSettings.js
 import React, { useState } from 'react';
 import { Button, Select, MenuItem, IconButton } from '@mui/material';
+import BouncingPlant from './BouncingPlant';
 
-const PlantSettings = ({ decor, plantList, handleDecorChange, resetPlantPositions, toggleBouncingPlant, showBouncingPlant, dropdownRef }) => {
+const PlantSettings = ({ decor, plantList, handleDecorChange, resetPlantPositions, dropdownRef }) => {
   const [showGearDropdown, setShowGearDropdown] = useState(false);
   const [showDecorDropdown, setShowDecorDropdown] = useState(false);
+  const [showBouncingPlant, setShowBouncingPlant] = useState(false);
+
+  const availablePlants = plantList.filter(plant => !decor.includes(plant));
+  const bouncingPlant = availablePlants.length > 0 ? availablePlants[0] : null;
 
   return (
     <div className="bookshelf-buttons">
@@ -14,8 +19,10 @@ const PlantSettings = ({ decor, plantList, handleDecorChange, resetPlantPosition
         </IconButton>
         {showGearDropdown && (
           <div className="dropdown-menu">
-            {/* <Button onClick={resetPlantPositions}>Reset Plant Positions</Button> */}
-            <Button onClick={toggleBouncingPlant}>
+            <Button onClick={resetPlantPositions}>
+              Reset Plant Positions
+            </Button>
+            <Button onClick={() => setShowBouncingPlant(!showBouncingPlant)}>
               {showBouncingPlant ? 'Disable' : 'Enable'} Bouncing Plant
             </Button>
             <Button onClick={() => setShowDecorDropdown(!showDecorDropdown)}>
@@ -41,6 +48,7 @@ const PlantSettings = ({ decor, plantList, handleDecorChange, resetPlantPosition
           ))}
         </div>
       )}
+      {showBouncingPlant && bouncingPlant && <BouncingPlant selectedPlant={bouncingPlant} />}
     </div>
   );
 };

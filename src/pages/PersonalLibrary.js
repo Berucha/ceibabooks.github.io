@@ -52,9 +52,9 @@ function PersonalLibrary() {
 
   return (
     <div className="library-container">
-      <h1>Your 3D PersonalLibrary is Coming Soon!</h1>
+      <h1>Your 3D Personal Library is Coming Soon!</h1>
       <p>
-        The 3D PersonalLibrary feature is under construction, but as a sneak peek, here's the developer's 2024 reading list!
+        The 3D Library feature is under construction, but as a sneak peek, here's the developer's 2024 reading list!
       </p>
 
       {/* Button to toggle the 3D PersonalLibrary preview */}

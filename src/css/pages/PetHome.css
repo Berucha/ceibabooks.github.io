@@ -1,0 +1,10 @@
+.petContainer {
+    width: 100%;
+    height: 100vh;
+    /* Make the canvas take up the full viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f4f8;
+    /* Soft background color for contrast */
+}
